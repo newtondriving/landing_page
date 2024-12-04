@@ -59,15 +59,14 @@ export default function PricingSection() {
   return (
     <div className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base font-semibold text-indigo-600">Pricing</h2>
-        <p className="mt-2 text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <p className="mt-2 text-2xl font-bold tracking-tight text-gray-900 hover:text-indigo-600 sm:text-6xl">
           Find the plan that works for you
         </p>
       </div>
-      <p className="mx-auto mt-6 max-w-2xl text-center text-lg text-gray-600 sm:text-xl">
+      <p className="mx-auto mt-2 max-w-2xl text-center text-md text-gray-600 sm:text-xl">
         Choose from our affordable driving packages designed to cater to all skill levels and schedules.
       </p>
-      <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 gap-y-6 gap-x-4 sm:gap-y-8 lg:max-w-4xl lg:grid-cols-3">
+      <div className="mx-auto mt-4 grid max-w-lg grid-cols-1 gap-y-6 gap-x-4 sm:gap-y-8 lg:max-w-4xl lg:grid-cols-3">
         {pricingPlans.map((plan) => (
           <div
             key={plan.id}
@@ -115,7 +114,7 @@ export default function PricingSection() {
           </div>
         ))}
       </div>
-      <p className="mt-10 text-center text-sm text-gray-500">
+      <p className="mt-5 text-center text-sm text-gray-500">
   * We charge <span className="font-semibold">$50 per session</span>. The number of sessions to be taken can change according to the client's needs.
 </p>
     </div>

@@ -13,12 +13,14 @@ import TermsOfUse from "./pages/Terms_of_Use";
 import FAQs from "./pages/FAQ";
 import PrivacyPolicy from "./pages/Privacy_Policy";
 import Gallery from "./pages/Gallery";
+import StatisticsSection from "./pages/StatsSection";
 
 export default function App() {
   const [isBannerVisible, setBannerVisible] = useState(true); // Track banner visibility
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const servicesRef = useRef(null);
+  const statRef = useRef(null)
   const testimonialsRef = useRef(null);
   const pricingRef = useRef(null);
   const contactRef = useRef(null);
@@ -27,14 +29,17 @@ export default function App() {
     heroRef,
     aboutRef,
     servicesRef,
+    statRef,
     testimonialsRef,
     pricingRef,
     contactRef,
   };
 
-  const scrollToSection = (refName) => {
-    refs[refName]?.current.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (refName, position = 'start') => {
+    refs[refName]?.current.scrollIntoView({ behavior: 'smooth', block: position });
   };
+
+  
 
   const location = useLocation();
   const isMainPage = location.pathname === "/";
@@ -47,7 +52,13 @@ export default function App() {
       )} */}
 
       {/* Navbar is always visible */}
-      <Navbar scrollToSection={scrollToSection} className={isBannerVisible ? "mt-[56px] md:mt-[64px]" : ""} />
+      <Navbar scrollToSection={(refName) => {
+    if (refName === 'testimonialsRef' || refName === 'statRef') {
+      scrollToSection(refName, 'center'); // Center these sections
+    } else {
+      scrollToSection(refName); // Default behavior for others
+    }
+  }} className={isBannerVisible ? "mt-[56px] md:mt-[64px]" : ""} />
 
       <div className="flex-1">
         {isMainPage && (
@@ -63,6 +74,9 @@ export default function App() {
             </section>
             <section ref={testimonialsRef}>
               <Testimonials />
+            </section>
+            <section ref={statRef}>
+              <StatisticsSection />
             </section>
             <section ref={pricingRef} className="mb-5">
               <PricingSection />

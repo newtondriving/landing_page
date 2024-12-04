@@ -1,4 +1,4 @@
-import image from "../assets/1.jpeg"
+import image from "../assets/1.jpeg";
 
 export default function AboutUs() {
   return (
@@ -7,7 +7,7 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between space-y-8 lg:space-y-0">
         
         {/* Left side: Instructor's Image */}
-        <div className="flex-none mr-10 w-full sm:w-80 lg:w-1/3 mx-auto">
+        <div className="flex-none mx-auto w-full sm:w-64 md:w-72 lg:w-1/3">
           <img
             src={image}
             alt="Instructor"
@@ -16,7 +16,7 @@ export default function AboutUs() {
         </div>
 
         {/* Right side: Instructor's History */}
-        <div className="flex-1 space-y-6 text-center lg:text-left">
+        <div className="flex-1 lg:ml-12 space-y-6 text-center lg:text-left">
           <h2 className="text-3xl font-semibold text-indigo-700">
             Meet Your Instructor, <span className="italic">Barjinder Singh</span>
           </h2>
@@ -31,7 +31,7 @@ export default function AboutUs() {
           </p>
           <div className="flex justify-center lg:justify-start mt-6">
             <a
-              href="#testimonials"
+              href="/testimonials"
               className="inline-block px-6 py-3 text-white bg-indigo-600 rounded-lg shadow hover:bg-indigo-700 transition-all"
             >
               View Testimonials

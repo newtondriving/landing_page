@@ -9,6 +9,7 @@ const navigation = [
   { name: 'About Us', refName: 'aboutRef' },
   { name: 'Services', refName: 'servicesRef' },
   { name: 'Testimonials', refName: 'testimonialsRef' },
+  { name: 'Achievements', refName: 'statRef' },
   { name: 'Gallery', refName: 'gallery' },
   { name: 'Pricing', refName: 'pricingRef' },
   { name: 'Contact', refName: 'contactRef' },
@@ -19,6 +20,7 @@ export default function Navbar({ scrollToSection }) {
   const navigate = useNavigate();
 
   const handleNavigation = (refName) => {
+    setMobileMenuOpen(false);
     if (refName === "gallery") {
       navigate("/gallery");
     } else {
@@ -35,9 +37,9 @@ export default function Navbar({ scrollToSection }) {
     <header className="fixed inset-x-0 top-0 z-50 bg-white/20 backdrop-blur-md shadow-md">
       <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-8">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <a href="/" className="-m-1 p-1">
             <span className="sr-only">Newton Driving School</span>
-            <img alt="Newton Driving School Logo" src={logo} className="h-16 w-48" />
+            <img alt="Newton Driving School Logo" src={logo} className="h-20 w-auto" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -86,7 +88,7 @@ export default function Navbar({ scrollToSection }) {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Newton Driving School</span>
-              <img alt="Newton Driving School Logo" src="../vite.svg" className="h-8 w-auto" />
+              <img alt="Newton Driving School Logo" src="../vite.svg" className="h-16 w-auto" />
             </a>
             <button
               type="button"
@@ -111,6 +113,25 @@ export default function Navbar({ scrollToSection }) {
                 ))}
               </div>
             </div>
+
+            <a href="tel:+17786973322" className="flex mt-4 items-center text-sm font-semibold text-gray-900 hover:bg-gray-50">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              className="w-5 h-5 mr-2"
+              style={{
+                background: "linear-gradient(to right, #ff80b5, #9089fc)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              <path d="M6.62 10.79a15.534 15.534 0 006.59 6.59l2.2-2.2a1 1 0 01.9-.27 11.564 11.564 0 003.61.56 1 1 0 011 1v3.71a1 1 0 01-1 1A17.93 17.93 0 013 4.05a1 1 0 011-1H7.7a1 1 0 011 1 11.564 11.564 0 00.56 3.61 1 1 0 01-.27.9l-2.2 2.2z" />
+            </svg>
+            +1 - (778) - 697 3322
+          </a>
+                
+
           </div>
         </DialogPanel>
       </Dialog>

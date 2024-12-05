@@ -1,7 +1,7 @@
 const stats = [
-    { id: 1, name: 'Students Trained', value: '1,000+' },
-    { id: 2, name: 'First Attempt Pass Rate', value: '400+' },
-    { id: 3, name: 'Total Passes', value: '100%' },
+    { id: 1, name: 'Students Trained', value: '500+' },
+    { id: 2, name: 'First Attempt Pass Rate', value: '150+' },
+    { id: 3, name: 'Total Passes Percentage', value: '100%' },
   ];
   
   export default function AchievementsSection() {

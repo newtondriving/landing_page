@@ -4,10 +4,10 @@ import emailjs from 'emailjs-com';
 export default function ContactUs() {
   const [agreed, setAgreed] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    first_name: '',
+    last_name: '',
     email: '',
-    phoneNumber: '',
+    phone_number: '',
     message: ''
   });
 
@@ -30,20 +30,20 @@ export default function ContactUs() {
     }
 
     const templateParams = {
-      first_name: formData.firstName,
-      last_name: formData.lastName,
+      first_name: formData.first_name,
+      last_name: formData.last_name,
       email: formData.email,
-      phone_number: formData.phoneNumber,
+      phone_number: formData.phone_number,
       message: formData.message,
     };
 
     // Use formRef.current here
     emailjs
       .sendForm(
-        'service_6dk6ll3', // Replace with your EmailJS service ID
-        'template_6jh78us', // Replace with your EmailJS template ID
+        'service_69vfieu', // Replace with your EmailJS service ID
+        'template_f7po2z2', // Replace with your EmailJS template ID
         formRef.current, // Send the form reference
-        'Us2eYLnjPMXBLTwBG' // Replace with your EmailJS user ID
+        '35AGZwAWAe5HJDjCS' // Replace with your EmailJS user ID
       )
       .then(
         (result) => {
@@ -110,9 +110,9 @@ export default function ContactUs() {
                 <label htmlFor="first-name" className="block text-sm/6 font-semibold text-gray-900">First name</label>
                 <input
                   id="first-name"
-                  name="firstName"
+                  name="first_name"
                   type="text"
-                  value={formData.firstName}
+                  value={formData.first_name}
                   onChange={handleChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                 />
@@ -121,9 +121,9 @@ export default function ContactUs() {
                 <label htmlFor="last-name" className="block text-sm/6 font-semibold text-gray-900">Last name</label>
                 <input
                   id="last-name"
-                  name="lastName"
+                  name="last_name"
                   type="text"
-                  value={formData.lastName}
+                  value={formData.last_name}
                   onChange={handleChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                 />
@@ -143,9 +143,9 @@ export default function ContactUs() {
                 <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-gray-900">Phone number</label>
                 <input
                   id="phone-number"
-                  name="phoneNumber"
+                  name="phone_number"
                   type="tel"
-                  value={formData.phoneNumber}
+                  value={formData.phone_number}
                   onChange={handleChange}
                   className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
                 />

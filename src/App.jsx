@@ -14,6 +14,7 @@ import FAQs from "./pages/FAQ";
 import PrivacyPolicy from "./pages/Privacy_Policy";
 import Gallery from "./pages/Gallery";
 import StatisticsSection from "./pages/StatsSection";
+import CarShowcase from "./pages/carShowcase";
 
 export default function App() {
   const [isBannerVisible, setBannerVisible] = useState(true); // Track banner visibility
@@ -71,6 +72,9 @@ export default function App() {
             </section>
             <section ref={servicesRef}>
               <Services />
+            </section>
+            <section>
+              <CarShowcase />
             </section>
             <section ref={testimonialsRef}>
               <Testimonials />

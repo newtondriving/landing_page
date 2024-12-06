@@ -25,7 +25,7 @@ export default function FAQs() {
             <div>
               <h2 className="text-2xl font-semibold text-gray-900">1. What areas does Newton Driving School serve?</h2>
               <p className="mt-4 text-lg text-gray-500">
-                Newton Driving School serves the Newton area, with driving lessons available within a 5 km radius. We offer both in-person and online lessons.
+              Newton Driving School proudly serves all areas, offering comprehensive driving lessons tailored to the needs of learners. Our services are available both within and beyond a 5 km radius, ensuring flexibility and accessibility for all students. For locations exceeding the 5 km radius, a fee of $55 per hour applies, reflecting our commitment to providing high-quality instruction across a wider service area.
               </p>
             </div>
             <div>
@@ -43,7 +43,7 @@ export default function FAQs() {
             <div>
               <h2 className="text-2xl font-semibold text-gray-900">4. What should I bring to my driving lesson?</h2>
               <p className="mt-4 text-lg text-gray-500">
-                Please bring your valid driver's permit, a form of identification, and comfortable clothes for driving. If it's your first lesson, feel free to bring any questions you may have.
+              Please bring your valid driver's permit, a form of identification, comfortable clothes, and appropriate shoes for driving. If it's your first lesson, feel free to bring any questions you may have as well.
               </p>
             </div>
             <div>

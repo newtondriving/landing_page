@@ -35,7 +35,7 @@ export default function Footer() {
             <div>
               <h4 className="font-semibold">Follow Us</h4>
               <div className="flex space-x-4 mt-2">
-                <a href="https://www.facebook.com" className="text-gray-400 hover:text-white">
+                <a href="https://www.facebook.com/barjindersingh.pannu?mibextid=ZbWKwL" className="text-gray-400 hover:text-white">
                   <FaFacebook className="h-6 w-6" />
                 </a>
                 <a href="https://www.instagram.com/newton_driving_school/" className="text-gray-400 hover:text-white">

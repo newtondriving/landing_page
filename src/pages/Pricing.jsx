@@ -19,7 +19,7 @@ const pricingPlans = [
     name: 'Intermediate',
     id: 'tier-intermediate',
     href: '#',
-    priceMonthly: '$750',
+    priceMonthly: '$699',
     description: 'For drivers who want to refine their skills.',
     features: [
       '15 hours of driving lessons',
@@ -33,7 +33,7 @@ const pricingPlans = [
     name: 'Advanced',
     id: 'tier-advanced',
     href: '#',
-    priceMonthly: '$1250',
+    priceMonthly: '$1149',
     description: 'Perfect for drivers preparing for their license test.',
     features: [
       '20 hours of driving lessons',
